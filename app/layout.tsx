@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title: "StreamLine - Simplify Your Workflow",
   description:
     "StreamLine is a powerful SaaS platform designed to streamline your business processes and boost productivity.",
-    generator: 'v0.dev'
+  generator: 'v0.dev'
 }
 
 export default function RootLayout({

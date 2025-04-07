@@ -1,0 +1,535 @@
+.dataCardEnterActive {
+    transition: all 0.3s ease-out;
+}
+
+.dataCardLeaveActive {
+    transition: all 0.3s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.dataCardEnterFrom,
+.dataCardLeaveTo {
+    transform: translateX(20px);
+    opacity: 0;
+}
+
+.card {
+    @apply p-8 rounded-lg shadow-lg;
+    transition: all 0.3s ease;
+}
+
+.card.dark {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    border-color: hsl(var(--border));
+}
+
+.title {
+    @apply text-4xl font-bold mb-6 text-center;
+}
+
+.subtitle {
+    font-size: 1.2rem !important;
+    text-align: center;
+    color: #666;
+    margin-bottom: 32px !important;
+    letter-spacing: 0.5px;
+}
+
+.dark .subtitle {
+    color: hsl(var(--muted-foreground));
+}
+
+.upload {
+    margin: 32px auto;
+    padding: 40px;
+    border: 2px dashed #2B5CE7;
+    border-radius: 16px;
+    background: #221d1e;
+    transition: all 0.3s ease;
+    max-width: 1000px;
+    text-align: center;
+}
+
+.dark .upload {
+    background: #221d1e;
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.upload:hover {
+    border-color: #4481EB;
+    background: #2d2829;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(43, 92, 231, 0.1);
+}
+
+.dark .upload:hover {
+    background: #2d2829;
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.upload :global(.ant-upload-drag-icon) {
+    font-size: 48px;
+    color: #2B5CE7;
+    margin-bottom: 16px;
+}
+
+.upload :global(.ant-upload-text) {
+    font-size: 18px;
+    color: #1a1a1a;
+    margin: 8px 0;
+}
+
+.dark .upload :global(.ant-upload-text) {
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.upload :global(.ant-upload-hint) {
+    font-size: 14px;
+    color: #666;
+}
+
+.dark .upload :global(.ant-upload-hint) {
+    color: rgba(255, 255, 255, 0.95);
+}
+
+/* 支持的格式文字样式 */
+.upload p {
+    color: #666;
+}
+
+.dark .upload p {
+    color: rgba(255, 255, 255, 0.95);
+}
+
+/* 按钮样式 */
+.upload button {
+    background: transparent;
+    border-color: hsl(var(--primary));
+    color: hsl(var(--primary));
+}
+
+.dark .upload button {
+    border-color: hsl(var(--primary));
+    color: hsl(var(--primary));
+}
+
+.dark .upload button:hover {
+    background: hsl(var(--primary) / 0.1);
+    border-color: hsl(var(--primary));
+    color: hsl(var(--primary));
+}
+
+.tableContainer {
+    @apply overflow-x-auto rounded-lg border border-border;
+    max-height: calc(100vh - 300px);
+}
+
+.dark .tableContainer {
+    background-color: rgba(17, 25, 40, 0.4);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.table {
+    width: 100%;
+}
+
+.table :global(.ant-table) {
+    width: 100%;
+}
+
+.table :global(.ant-table-container) {
+    width: 100%;
+}
+
+.table :global(.ant-table-content) {
+    width: 100%;
+}
+
+.tableContainer :global(th) {
+    background: #f8fafd !important;
+    font-weight: 600 !important;
+    color: #1a1a1a !important;
+    padding: 16px !important;
+    font-size: 1rem !important;
+}
+
+.tableContainer :global(td) {
+    @apply p-4;
+}
+
+.dark .tableContainer :global(td) {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tableContainer :global(tr:hover) {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+.tableContainer :global(button) {
+    border-radius: 8px !important;
+    transition: all 0.3s ease !important;
+}
+
+.tableContainer :global(button:hover) {
+    transform: translateY(-1px) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+}
+
+.table :global(.ant-btn) {
+    border-radius: 6px;
+    height: 32px;
+    padding: 0 16px;
+    font-size: 14px;
+}
+
+.table :global(.ant-btn-primary) {
+    background: #2B5CE7;
+    border-color: #2B5CE7;
+}
+
+.table :global(.ant-btn-primary:hover) {
+    background: #1e4fd0;
+    border-color: #1e4fd0;
+}
+
+.table :global(.ant-btn-link) {
+    color: #2B5CE7;
+}
+
+.table :global(.ant-btn-text.ant-btn-dangerous) {
+    color: #ff4d4f;
+}
+
+.table :global(.ant-pagination) {
+    margin: 16px 0;
+}
+
+.table :global(.ant-pagination-item) {
+    border-radius: 6px;
+}
+
+.table :global(.ant-pagination-item-active) {
+    background: #2B5CE7;
+    border-color: #2B5CE7;
+}
+
+.table :global(.ant-pagination-item-active a) {
+    color: #fff;
+}
+
+.table :global(.ant-empty) {
+    margin: 32px 0;
+}
+
+.table :global(.ant-empty-image) {
+    height: 60px;
+}
+
+.table :global(.ant-empty-description) {
+    color: #666;
+}
+
+.audioPlayer {
+    max-width: 200px;
+    margin-left: 12px;
+    border-radius: 20px;
+}
+
+.customFilterDropdown {
+    padding: 8px;
+    border-radius: 6px;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.customFilterDropdown input {
+    width: 100%;
+    margin: 8px 0 16px;
+    border-radius: 8px;
+}
+
+.customFilterDropdown :global(.ant-space) {
+    width: 100%;
+    gap: 8px !important;
+}
+
+.customFilterDropdown :global(.ant-btn) {
+    border-radius: 8px;
+    height: 36px;
+    flex: 1;
+}
+
+.highlight {
+    color: #2B5CE7;
+    font-weight: 500;
+    background: rgba(43, 92, 231, 0.1);
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+
+/* 自定义滚动条样式 */
+.tableContainer::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+.tableContainer::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.tableContainer::-webkit-scrollbar-thumb {
+    @apply bg-primary/20 rounded-full;
+}
+
+.dark .tableContainer::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.dark .tableContainer::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.dark .tableContainer::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* 移动端适配 */
+@media screen and (max-width: 768px) {
+    .card {
+        padding: 16px;
+    }
+
+    .title {
+        font-size: 2rem !important;
+        margin-bottom: 12px !important;
+    }
+
+    .subtitle {
+        font-size: 1rem !important;
+        padding: 0 16px;
+        margin-bottom: 24px !important;
+    }
+
+    .upload {
+        padding: 24px;
+        margin: 20px auto;
+        border-radius: 12px;
+    }
+
+    .searchAndActions {
+        position: static;
+        margin: 16px -8px;
+        padding: 16px;
+        border-radius: 8px;
+    }
+
+    .searchAndActions>div {
+        flex-wrap: nowrap !important;
+        overflow-x: auto;
+        padding-bottom: 8px;
+    }
+
+    .searchAndActions button {
+        white-space: nowrap;
+        min-width: max-content;
+    }
+
+    .tableContainer {
+        margin: 16px -8px;
+        border-radius: 12px;
+        overflow-x: auto;
+    }
+
+    .tableContainer table {
+        min-width: 800px;
+    }
+
+    .audioPlayer {
+        max-width: 150px;
+    }
+
+    .tipItem {
+        padding: 12px;
+        font-size: 13px;
+    }
+
+    .tableContainer :global(td),
+    .tableContainer :global(th) {
+        padding: 12px !important;
+        font-size: 0.9rem !important;
+    }
+
+    .voiceName {
+        font-size: 0.9rem;
+    }
+
+    .voiceLabel {
+        font-size: 0.85rem;
+    }
+}
+
+/* 平板适配 */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .card {
+        padding: 24px;
+    }
+
+    .title {
+        font-size: 2.5rem !important;
+    }
+
+    .searchAndActions,
+    .tableContainer {
+        margin: 20px auto;
+    }
+
+    .upload {
+        padding: 32px;
+        margin: 24px auto;
+    }
+
+    .searchAndActions {
+        position: static;
+        margin: 20px auto;
+    }
+}
+
+.searchAndActions {
+    @apply flex flex-wrap gap-4 mb-6 items-center justify-between;
+}
+
+.dark .searchAndActions {
+    background-color: rgba(17, 25, 40, 0.4);
+}
+
+.tips {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 8px 0;
+}
+
+.tipItem {
+    padding: 16px;
+    background: #f8fafc;
+    border-radius: 8px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #666;
+    display: flex;
+    align-items: flex-start;
+    transition: all 0.3s ease;
+}
+
+.tipItem:hover {
+    background: #f0f4f8;
+    transform: translateX(4px);
+}
+
+.tableContainer :global(td) {
+    padding: 12px 16px !important;
+    font-size: 0.95rem !important;
+    vertical-align: middle !important;
+}
+
+.tableContainer :global(th) {
+    padding: 16px !important;
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    color: #1a1a1a !important;
+    background: #f8fafd !important;
+    white-space: nowrap !important;
+}
+
+.searchAndActions button {
+    min-width: max-content;
+}
+
+/* 音色信息样式 */
+.voiceInfo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.voiceName {
+    font-weight: 500;
+    color: #1a1a1a;
+    white-space: nowrap;
+    background-color: #d99999;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.voiceLabel {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* 自定义滚动条 */
+.searchAndActions,
+.tableContainer {
+    scrollbar-width: thin;
+    scrollbar-color: #ddd #f5f5f5;
+}
+
+.searchAndActions::-webkit-scrollbar,
+.tableContainer::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+.searchAndActions::-webkit-scrollbar-track,
+.tableContainer::-webkit-scrollbar-track {
+    background: #f5f5f5;
+    border-radius: 3px;
+}
+
+.searchAndActions::-webkit-scrollbar-thumb,
+.tableContainer::-webkit-scrollbar-thumb {
+    background: #ddd;
+    border-radius: 3px;
+}
+
+.searchAndActions::-webkit-scrollbar-thumb:hover,
+.tableContainer::-webkit-scrollbar-thumb:hover {
+    background: #ccc;
+}
+
+/* 深色主题下的文字颜色 */
+.dark .voiceName {
+    color: rgba(255, 255, 255, 0.9);
+    background-color: #d99999;
+}
+
+.dark .voiceLabel {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* 表头样式 */
+.dark .tableContainer :global(th) {
+    background: rgba(17, 25, 40, 0.8) !important;
+    color: rgba(255, 255, 255, 0.9) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* 目标音色文字颜色 */
+.targetVoice {
+    color: #000;
+}
+
+.dark .targetVoice {
+    color: rgba(255, 255, 255, 0.95);
+}
+
+/* 表格中的目标音色文字 */
+.dark .tableContainer :global(td) {
+    color: rgba(255, 255, 255, 0.95);
+}
+
+/* 上传区域内的文字颜色 */
+.dark .upload p,
+.dark .upload :global(.ant-upload-text),
+.dark .upload :global(.ant-upload-hint) {
+    color: rgba(255, 255, 255, 0.95);
+}
